@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ИндигоСофт — Управление прайсами</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app">
+  <header class="topbar">
+    <div class="topbar-start">
+      <button class="icon-btn topbar__menu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="sidebar">
+        <img src="img/icons/menu.svg" alt="">
+      </button>
+      <a class="brand" href="index.html">
+        <picture>
+          <source media="(max-width: 767.98px)" srcset="img/logo-mobile.svg">
+          <img class="brand-logo" src="img/logo.svg" alt="ИндигоСофт">
+        </picture>
+      </a>
+      <h1 class="page-name">Управление прайсами</h1>
+    </div>
+    <div class="topbar-actions">
+      <button class="icon-btn notification-btn" type="button" aria-label="Уведомления">
+        <img src="img/icons/bell.svg" alt="">
+        <i class="notification-dot"></i>
+      </button>
+      <button class="user-trigger" type="button" aria-expanded="false">
+        <span class="avatar avatar-sm"></span>
+        <span class="user-copy">
+          <b>Мария Анисимова</b>
+          <small>ООО "ИндигоСофт"</small>
+        </span>
+        <img class="user-chevron" src="img/icons/chevron-down.svg" alt="">
+      </button>
+    </div>
+  </header>
+
+  <div class="app-body">
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar__nav">
+      <a class="icon-btn icon-btn--label" href="index.html" title="Дашборд"><img src="img/icons/dashboard.svg" alt=""><span class="icon-btn__text">Дашборд</span></a>
+      <a class="icon-btn icon-btn--label" href="requests.html" title="Входящие запросы"><img src="img/icons/inbox.svg" alt=""><span class="icon-btn__text">Входящие запросы</span></a>
+      <a class="icon-btn icon-btn--label" href="documents.html" title="Исходящие документы"><img src="img/icons/document.svg" alt=""><span class="icon-btn__text">Исходящие документы</span></a>
+      <a class="icon-btn icon-btn--label" href="customers.html" title="Заказчики"><img src="img/icons/users.svg" alt=""><span class="icon-btn__text">Заказчики</span></a>
+      <a class="icon-btn icon-btn--label" href="tenders.html" title="Активные тендеры"><img src="img/icons/hammer.svg" alt=""><span class="icon-btn__text">Активные тендеры</span></a>
+      <a class="icon-btn icon-btn--label" href="tender-products.html" title="Товары по тендерам"><img src="img/icons/handshake.svg" alt=""><span class="icon-btn__text">Товары по тендерам</span></a>
+      <a class="icon-btn icon-btn--label" href="my-products.html" title="Мои товары"><img src="img/icons/cube.svg" alt=""><span class="icon-btn__text">Мои товары</span></a>
+      <a class="icon-btn icon-btn--label" href="#" title="Статистика"><img src="img/icons/chart.svg" alt=""><span class="icon-btn__text">Статистика</span></a>
+      <a class="icon-btn icon-btn--label icon-btn--active" href="price-management.html" title="Управление прайсами" aria-current="page"><img src="img/icons/settings.svg" alt=""><span class="icon-btn__text">Управление прайсами</span></a>
+      <a class="icon-btn icon-btn--label" href="#" title="Предложить идею"><img src="img/icons/chat.svg" alt=""><span class="icon-btn__text">Предложить идею</span></a>
+    </nav>
+    <a class="icon-btn icon-btn--label sidebar__info" href="#" title="О платформе"><img src="img/icons/info.svg" alt=""><span class="icon-btn__text">О платформе</span></a>
+  </aside>
+  <div class="sidebar__backdrop"></div>
+
+  <main class="app-main">
+
+    <section class="price-actions">
+      <button class="upload-price" type="button"><img src="img/icons/upload.svg" alt="">Загрузить прайс</button>
+      <button class="create-processor" type="button"><img src="img/icons/plus.svg" alt="">Создать обработчик</button>
+    </section>
+
+    <section class="panel price-panel">
+      <h2>Список обработчиков</h2>
+      <div class="table-scroll">
+        <table class="data-table processors-table">
+          <thead><tr><th><input type="checkbox"></th><th>№</th><th>Наименование</th><th>Тип</th><th>Источник</th><th>Подразделения</th><th>Срок действия, дней</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><input type="checkbox"></td><td>1</td><td>Основной прайс</td><td>Прайс-YML</td><td>https://bibwiw.yml</td><td>Для всех</td><td>3</td><td><button class="delete-btn"><img src="img/icons/trash.svg" alt=""></button></td></tr>
+            <tr><td><input type="checkbox"></td><td>2</td><td>Прайс от 11.03</td><td>Прайс-YML</td><td>https://bibwiw.yml</td><td>Склад №1</td><td>5</td><td><button class="delete-btn"><img src="img/icons/trash.svg" alt=""></button></td></tr>
+            <tr><td><input type="checkbox"></td><td>3</td><td>Временный прайс</td><td>Прайс-XLS</td><td>file.xlsx</td><td>Основной</td><td>1</td><td><button class="delete-btn"><img src="img/icons/trash.svg" alt=""></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel price-panel history-panel">
+      <h2>История загрузок</h2>
+      <div class="table-scroll">
+        <table class="data-table price-history-table">
+          <thead><tr><th>№</th><th>Обработчик</th><th>Статус</th><th>Дата</th></tr></thead>
+          <tbody>
+            <tr><td>540915</td><td>Основной прайс</td><td><span class="status success">Завершен</span></td><td>29.07.2026<small>00:13:01</small></td></tr>
+            <tr><td>540149</td><td>Основной прайс</td><td><span class="status success">Завершен</span></td><td>28.07.2026<small>00:13:01</small></td></tr>
+            <tr><td>539423</td><td>Прайс 11.03</td><td><span class="status wait">В процессе</span></td><td>27.07.2026<small>00:13:01</small></td></tr>
+            <tr><td>539047</td><td>Временный</td><td><span class="status error">△ Ошибка</span></td><td>26.07.2026<small>00:13:01</small></td></tr>
+            <tr><td>538890</td><td>Основной прайс</td><td><span class="status danger">Отменён</span></td><td>24.07.2026<small>00:13:01</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  </div>
+
+  <!--
+  <div class="processor-backdrop"></div>
+  <section class="processor-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="processor-title">
+    <div class="processor-head"><h2 id="processor-title">Новый обработчик</h2><button class="processor-close" type="button" aria-label="Закрыть">×</button></div>
+    <form class="processor-form">
+      <input type="text" placeholder="Наименование">
+      <div><select><option>Тип</option><option>Прайс-YML</option><option>Прайс-XLS</option></select><select><option>Срок действия, дней</option><option>1</option><option>3</option><option>5</option></select></div>
+      <input type="text" placeholder="Источник">
+      <input type="text" placeholder="Подразделение">
+      <footer><button class="processor-close cancel" type="button">Отменить</button><button class="submit-processor" type="submit">Создать</button></footer>
+    </form>
+  </section>
+  -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>

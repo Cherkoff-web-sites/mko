@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
